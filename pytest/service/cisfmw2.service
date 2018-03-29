@@ -1,0 +1,13 @@
+[Unit]
+Description=ASGS CISFMW Weblogic Domain service
+
+[Service]
+PrivateTmp=true
+Type=forking
+User=webadm
+Group=webgrp
+ExecStart=/usr/sbin/asgs/fmw2_domain_wrapper.bash START CISFMW
+ExecStop=/usr/sbin/asgs/fmw2_domain_wrapper.bash STOP CISFMW
+
+[Install]
+WantedBy=multi-user.target

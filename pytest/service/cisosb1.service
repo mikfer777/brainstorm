@@ -1,0 +1,13 @@
+[Unit]
+Description=ASGS CISOSB Weblogic Domain service
+
+[Service]
+PrivateTmp=true
+Type=forking
+User=webadm
+Group=webgrp
+ExecStart=/usr/sbin/asgs/fmw1_domain_wrapper.bash START CISOSB
+ExecStop=/usr/sbin/asgs/fmw1_domain_wrapper.bash STOP CISOSB
+
+[Install]
+WantedBy=multi-user.target

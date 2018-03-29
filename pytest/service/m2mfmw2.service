@@ -1,0 +1,13 @@
+[Unit]
+Description=ASGS M2MFMW Weblogic Domain service
+
+[Service]
+PrivateTmp=true
+Type=forking
+User=webadm
+Group=webgrp
+ExecStart=/usr/sbin/asgs/fmw2_domain_wrapper.bash START M2MFMW
+ExecStop=/usr/sbin/asgs/fmw2_domain_wrapper.bash STOP M2MFMW
+
+[Install]
+WantedBy=multi-user.target
