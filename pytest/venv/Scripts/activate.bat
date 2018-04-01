@@ -1,5 +1,5 @@
 @echo off
-set "VIRTUAL_ENV=C:\rootWorknew\pytest\venv"
+set "VIRTUAL_ENV=C:\rootGit\Github\brainstorm\pytest\venv"
 
 if defined _OLD_VIRTUAL_PROMPT (
     set "PROMPT=%_OLD_VIRTUAL_PROMPT%"
