@@ -1,7 +1,7 @@
-
-import os
 import glob
 import md5
+import os
+
 import paramiko
 
 hostname = '172.24.136.36'  # remote hostname where SSH server is running
@@ -12,11 +12,13 @@ rsa_private_key = r"c:\rootCygwin\home\s227783\.ssh\id_rsa"
 
 dir_local = r"C:\rootGit\Github\brainstorm\pytest"
 dir_remote = "brainstorm"
+
+dir_target_local = r"C:\rootWorkspace\current_workspace\HsmLkg3Test"
+dir_target_remote = "HsmLkg3Test"
 glob_pattern = '*.py'
 files_copied = 0
 
 RECV_BYTES = 4096
-
 
 paramiko.common.logging.basicConfig(level=paramiko.common.INFO)
 
@@ -77,6 +79,34 @@ def remotecopyfiles():
     return files_copied
 
 
+def remotecopytargetfiles():
+    files_copied = 0
+    for fname in glob.glob(dir_target_local+ os.sep + '*'):
+        is_up_to_date = False
+        local_file = os.path.join(dir_target_local, fname)
+        remote_file = dir_target_remote + '/' + os.path.basename(fname)
+
+        # if remote file exists
+        try:
+            if sftp.stat(remote_file):
+                local_file_data = open(local_file, "rb").read()
+                remote_file_data = sftp.open(remote_file).read()
+                md1 = md5.new(local_file_data).digest()
+                md2 = md5.new(remote_file_data).digest()
+                if md1 == md2:
+                    is_up_to_date = True
+                    print "UNCHANGED:", os.path.basename(fname)
+                else:
+                    print "MODIFIED:", os.path.basename(fname),
+        except:
+            print "NEW: ", os.path.basename(fname),
+
+        if not is_up_to_date:
+            print 'Copying', local_file, 'to ', remote_file
+            sftp.put(local_file, remote_file)
+            files_copied += 1
+    return files_copied
+
 try:
     print 'Establishing SSH connection to:', hostname, port, '...'
     t = paramiko.Transport((hostname, port))
@@ -95,11 +125,16 @@ try:
         sftp.mkdir(dir_remote)
     except IOError, e:
         print '(assuming ', dir_remote, 'exists)', e
+    try:
+        sftp.mkdir(dir_target_remote)
+    except IOError, e:
+        print '(assuming ', dir_target_remote, 'exists)', e
     remotecopyfiles()
+    remotecopytargetfiles()
     stdout_data = []
     stderr_data = []
     session = t.open_channel(kind='session')
-    session.exec_command('python brainstorm/socketserver.py > /dev/null 2>&1 &')
+    session.exec_command('python brainstorm/copoverssh_totarget.py >./copover.out 2>&1 &')
     while True:
         if session.recv_ready():
             stdout_data.append(session.recv(RECV_BYTES))
@@ -111,7 +146,6 @@ try:
     print ('exit status: ', session.recv_exit_status())
     print (b''.join(stdout_data))
     print (b''.join(stderr_data))
-
 
     t.close()
 
