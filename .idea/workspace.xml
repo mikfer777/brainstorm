@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5f00b17d-713c-4452-98f1-b687991c4969" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/brainstorm.iml" afterPath="$PROJECT_DIR$/.idea/brainstorm.iml" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/pytest/fake/justatest.py" afterPath="$PROJECT_DIR$/pytest/fake/justatest.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -25,8 +24,18 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="copoverssh.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="copoverssh.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pytest/copoverssh.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mytest.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pytest/another_fake_dir/mytest.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -37,8 +46,22 @@
       </file>
     </leaf>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/pytest/another_fake_dir/mytest.py" />
+      </list>
+    </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="1358" />
@@ -61,6 +84,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -68,12 +93,27 @@
               <item name="brainstorm" type="b2602c69:ProjectViewProjectNode" />
               <item name="brainstorm" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="brainstorm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="brainstorm" type="462c0819:PsiDirectoryNode" />
+              <item name="pytest" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="brainstorm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="brainstorm" type="462c0819:PsiDirectoryNode" />
+              <item name="pytest" type="462c0819:PsiDirectoryNode" />
+              <item name="another_fake_dir" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="brainstorm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="brainstorm" type="462c0819:PsiDirectoryNode" />
+              <item name="pytest" type="462c0819:PsiDirectoryNode" />
+              <item name="fake" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -145,7 +185,14 @@
       <option name="project" value="LOCAL" />
       <updated>1533559784019</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="sync from office 2">
+      <created>1533562069598</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1533562069598</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -181,7 +228,15 @@
                 <collection />
               </option>
               <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-                <collection />
+                <collection>
+                  <UserGroup>
+                    <option name="users">
+                      <list>
+                        <option value="origin/my_first_branch_for_debugging" />
+                      </list>
+                    </option>
+                  </UserGroup>
+                </collection>
               </option>
               <option name="COLUMN_ORDER">
                 <list>
@@ -202,13 +257,30 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="sync from office" />
-    <option name="LAST_COMMIT_MESSAGE" value="sync from office" />
+    <MESSAGE value="sync from office 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="sync from office 2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/pytest/socketserver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pytest/copoverssh.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pytest/socketserver.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -266,6 +338,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pytest/copoverssh.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pytest/another_fake_dir/mytest.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
